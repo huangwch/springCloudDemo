@@ -3,12 +3,9 @@ package com.hwc.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * 启动部门为服务提供者
- */
 @SpringBootApplication
-public class DeptProvider8001_APP {
+public class DeptConsumer80_App {
     public static void main(String[] args) {
-        SpringApplication.run(DeptProvider8001_APP.class, args);
+        SpringApplication.run(DeptConsumer80_App.class, args);
     }
 }
