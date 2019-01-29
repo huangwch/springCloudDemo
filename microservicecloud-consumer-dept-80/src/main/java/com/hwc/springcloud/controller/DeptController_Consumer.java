@@ -15,7 +15,8 @@ public class DeptController_Consumer {
     private static final String REST_URL_PERFIX;
 
     static {
-        REST_URL_PERFIX = "http://localhost:8001";
+//        REST_URL_PERFIX = "http://localhost:8001";
+        REST_URL_PERFIX = "http://MICROSERVICECLOUD-DEPT";
     }
 
     /**
