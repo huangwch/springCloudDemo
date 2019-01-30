@@ -1,5 +1,7 @@
 package com.hwc.springcloud.cfgbeans;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,9 +13,11 @@ public class ConfigBean {
     @Bean
     @LoadBalanced
     public RestTemplate getRestTemplate() {
-        /**
-         * RestTemplate是访问Rest服务大的客户端模板工具集
-         */
         return new RestTemplate();
+    }
+
+    @Bean
+    public IRule myRule(){
+        return new RandomRule(); // 自定义负载均衡规则：随机
     }
 }
