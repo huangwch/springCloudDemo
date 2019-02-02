@@ -17,7 +17,7 @@ public class ConfigBean {
     }
 
     @Bean
-    public IRule myRule(){
+    public IRule myRule() {
         return new RandomRule(); // 自定义负载均衡规则：随机
     }
 }
