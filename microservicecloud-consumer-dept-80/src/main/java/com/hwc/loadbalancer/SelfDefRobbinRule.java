@@ -28,7 +28,6 @@ public class SelfDefRobbinRule extends AbstractLoadBalancerRule {
     private static class IntPair {
         final int cycle;
         final int nextServerCyclicCounter;
-
         public IntPair(int cycle, int nextServerCyclicCounter) {
             this.cycle = cycle;
             this.nextServerCyclicCounter = nextServerCyclicCounter;
@@ -47,12 +46,10 @@ public class SelfDefRobbinRule extends AbstractLoadBalancerRule {
             List<Server> allServers = lb.getAllServers();
             int upCount = reachableServers.size();
             int serverCount = allServers.size();
-
             if ((upCount == 0) || (serverCount == 0)) {
                 log.warn("No up servers available from load balancer: " + lb);
                 return null;
             }
-
             int nextServerIndex = getNextServerIndex(serverCount);
             server = allServers.get(nextServerIndex);
 
