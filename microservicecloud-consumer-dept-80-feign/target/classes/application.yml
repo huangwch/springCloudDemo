@@ -6,3 +6,11 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+
+# 客户端服务降级：
+# 在springCloud Dalston之前的版本中，如果classpath中有Hystrix，那么Feign默认会为所有的方法加上断路器。
+# 这种默认的行为在springCloud Dalston及其以后的版本中被改变为可选项，默认关闭，使用以下配置手动开启。
+# 以下配置无法被IDE识别，可不用理会，实际已起作用。
+feign:
+  hystrix:
+    enabled: true

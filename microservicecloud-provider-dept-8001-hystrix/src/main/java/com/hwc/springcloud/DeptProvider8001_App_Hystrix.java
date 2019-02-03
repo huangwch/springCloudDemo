@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-@EnableCircuitBreaker // 启用熔断机制
+@EnableCircuitBreaker // 启用熔断机制（类路径下的某些接口已做了熔断后备 @HystrixCommand）
 public class DeptProvider8001_App_Hystrix {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvider8001_App_Hystrix.class, args);

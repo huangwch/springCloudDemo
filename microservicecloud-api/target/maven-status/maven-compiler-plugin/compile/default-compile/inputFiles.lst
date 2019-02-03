@@ -1,2 +1,3 @@
-D:\ideaProject\springCloudDemo\microservicecloud-api\src\main\java\com\hwc\springcloud\service\DeptService.java
+D:\ideaProject\springCloudDemo\microservicecloud-api\src\main\java\com\hwc\springcloud\service\DeptServiceFallbackFactory.java
+D:\ideaProject\springCloudDemo\microservicecloud-api\src\main\java\com\hwc\springcloud\service\DeptClientService.java
 D:\ideaProject\springCloudDemo\microservicecloud-api\src\main\java\com\hwc\springcloud\entities\Dept.java
