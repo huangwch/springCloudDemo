@@ -16,8 +16,8 @@ public class ConfigBean {
         return new RestTemplate();
     }
 
-//    @Bean
-//    public IRule myRule() {
-//        return new RandomRule(); // 使用Ribbon提供的负载均衡算法
-//    }
+    @Bean
+    public IRule myRule() {
+        return new RandomRule(); // 使用Ribbon提供的负载均衡算法
+    }
 }

@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
-@Accessors
+@Accessors(chain = true)
 @NoArgsConstructor
 @Data // 为每个属性生成get/set方法
 public class Dept implements Serializable {

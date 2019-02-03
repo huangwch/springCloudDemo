@@ -16,6 +16,7 @@
         <module>../microservicecloud-eureka-7003</module>
         <module>../microservicecloud-provider-dept-8002</module>
         <module>../microservicecloud-consumer-dept-80-feign</module>
+        <module>../microservicecloud-provider-dept-8001-hystrix</module>
     </modules>
     <packaging>pom</packaging>
 
