@@ -2,14 +2,14 @@ package com.hwc.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableDiscoveryClient
-public class DeptProvider8002_App {
+@EnableFeignClients(basePackages = {"com.hwc.springcloud"})
+public class DeptConsumer80_App_Feign {
     public static void main(String[] args) {
-        SpringApplication.run(DeptProvider8002_App.class, args);
+        SpringApplication.run(DeptConsumer80_App_Feign.class, args);
     }
 }
