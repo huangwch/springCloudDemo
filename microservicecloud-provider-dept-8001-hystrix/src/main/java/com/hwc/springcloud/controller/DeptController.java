@@ -23,7 +23,7 @@ public class DeptController {
     @HystrixCommand(fallbackMethod = "get_fallbackMethod") //对指定的服务接口做后备
     public Dept get(@PathVariable("id") Long id) {
         Dept dept = deptService.get(id);
-        if (dept == null) {
+        if (dept == null) { // 模拟服务异常
             throw new RuntimeException("no ralated info ~");
         }
         return dept;

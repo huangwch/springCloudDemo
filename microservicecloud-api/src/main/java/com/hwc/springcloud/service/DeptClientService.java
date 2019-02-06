@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-//@FeignClient(name="MICROSERVICECLOUD-DEPT")
+//@FeignClient(name="MICROSERVICECLOUD-DEPT") // 配套使用@HystrixCommand注解对某个provider接口做后备处理，对应的服务主启动类上使用@EnableCircuteBreaker标注
 @FeignClient(name="MICROSERVICECLOUD-DEPT",fallbackFactory = DeptServiceFallbackFactory.class)
 public interface DeptClientService {
     @RequestMapping(value = "/dept/add", method = RequestMethod.POST)

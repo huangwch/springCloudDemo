@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * 对DeptClientService接口中的所有方法
+ */
 @Component
 public class DeptServiceFallbackFactory implements FallbackFactory<DeptClientService> {
     @Override
