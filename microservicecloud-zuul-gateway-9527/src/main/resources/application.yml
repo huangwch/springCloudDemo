@@ -13,6 +13,16 @@ eureka:
     prefer-ip-address: true
     instance-id: gateway-9527.com
 
+# 如下设置后，需要使用
+#  http://{网关域名}:{server.port}/{zuul.prefix}/{zuul.routes.mydept.path}/reset接口名
+# 格式访问微服务。如: http://myzuul.com:9527/athwc/mydept/dept/list
+zuul:
+  ignored-services: "*" # 隐藏真实的微服务名
+  prefix: /athwc  # 指定统一访问前缀
+  routes: # 路由映射
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+
 info:
   app.name: atguigu-microservicecloud
   company.name: www.hwc.com
