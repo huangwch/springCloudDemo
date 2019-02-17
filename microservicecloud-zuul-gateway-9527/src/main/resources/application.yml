@@ -5,6 +5,8 @@ spring:
   application:
     name: microservicecloud-zuul-gateway
 
+# zuul和 Eureka 整合，zuul注册为 Eureka服务治理下的应用，同时从eureka中获取其他微服务的消息，
+# 以后访问微服务是通过zuul跳转后获得。
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
